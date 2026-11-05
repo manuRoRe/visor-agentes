@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Visor de agentes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/visor.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <div>
+          <p class="eyebrow">Visor de agentes · en directo</p>
+          <h1 id="titulo">Equipo de agentes</h1>
+          <p class="orden" id="orden">Esperando una orden…</p>
+        </div>
+        <div>
+          <div class="contadores">
+            <div class="contador">
+              <p class="k">TIEMPO</p>
+              <p class="v" id="tiempo">00:00</p>
+            </div>
+            <div class="contador">
+              <p class="k">ACCIONES</p>
+              <p class="v" id="acciones">0</p>
+            </div>
+            <div class="contador tokens">
+              <p class="k">TOKENS</p>
+              <p class="v" id="tokens">0</p>
+            </div>
+            <div class="contador estado">
+              <p class="k">ESTADO</p>
+              <p class="v" id="estado">En espera</p>
+            </div>
+          </div>
+          <div class="botones">
+            <button id="bDemo" type="button" title="Reproduce una ejecución simulada">▶ Simular</button>
+            <button id="bReset" type="button">Reiniciar</button>
+            <button id="bOlvidar" type="button" title="Borra las pasadas guardadas para comparar">
+              Olvidar pasadas
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <section class="escenario" id="escenario">
+        <svg id="svg" aria-hidden="true">
+          <defs>
+            <marker
+              id="flecha"
+              viewBox="0 0 10 10"
+              refX="9"
+              refY="5"
+              markerWidth="7"
+              markerHeight="7"
+              orient="auto-start-reverse"
+            >
+              <path d="M0,0 L10,5 L0,10 z" fill="#2A4360"></path>
+            </marker>
+          </defs>
+          <g id="aristas"></g>
+          <g id="paquetes"></g>
+        </svg>
+      </section>
+
+      <section class="abajo">
+        <div class="panel">
+          <h2>Qué está pasando</h2>
+          <div class="feed" id="feed"></div>
+        </div>
+        <div class="panel">
+          <h2>Archivos tocados</h2>
+          <div class="repos" id="repos"></div>
+        </div>
+        <div class="panel github">
+          <h2>GitHub</h2>
+          <div id="github"></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="final" id="final">
+      <div class="caja">
+        <p class="k">TRABAJO TERMINADO</p>
+        <p class="v" id="finalV"></p>
+        <p class="d" id="finalD"></p>
+        <p class="cmp" id="finalCmp"></p>
+        <p class="h">PR abierta · falta la revisión humana</p>
+      </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

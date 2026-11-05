@@ -1,0 +1,18 @@
+{
+  "titulo": "CineData · equipo de agentes",
+  "puerto": 4545,
+  "repos": [
+    { "id": "api", "nombre": "lab-cinedata-api", "ruta": "../lab-cinedata-api", "github": "" },
+    { "id": "web", "nombre": "cinedata-cors", "ruta": "../cinedata-cors", "github": "" }
+  ],
+  "orden": ["orquestador", "analista", "back", "front", "qa", "seguridad", "revisor"],
+  "agentes": {
+    "orquestador": { "nombre": "Orquestador", "rol": "Recibe la orden y reparte", "color": "#5CE1E6" },
+    "analista": { "nombre": "Analista", "rol": "Lee el código y hace el plan", "color": "#FFD166" },
+    "back": { "nombre": "Back", "rol": "API", "color": "#FF9B54" },
+    "front": { "nombre": "Front", "rol": "Web", "color": "#C792EA" },
+    "qa": { "nombre": "QA", "rol": "Tests y comprobaciones", "color": "#9FE2A8" },
+    "seguridad": { "nombre": "Seguridad", "rol": "Audita y monta el CI", "color": "#FF8A95" },
+    "revisor": { "nombre": "Revisor", "rol": "Veredicto final y PR", "color": "#E6EEF5" }
+  }
+}

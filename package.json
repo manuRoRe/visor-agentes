@@ -1,0 +1,16 @@
+{
+  "name": "visor-agentes",
+  "version": "2.0.0",
+  "description": "Panel en directo para ver cómo trabaja un equipo de agentes de IA (Claude Code, OpenCode u otros)",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/server/index.js",
+    "instalar:claude": "node scripts/instalar.mjs claude",
+    "instalar:opencode": "node scripts/instalar.mjs opencode",
+    "reset": "node scripts/reset-demo.mjs"
+  },
+  "license": "MIT"
+}

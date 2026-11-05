@@ -1,0 +1,539 @@
+[
+ {
+  "pausa": 300,
+  "tipo": "orden",
+  "texto": "Issue #1: estadísticas por género. Añade GET /peliculas/estadisticas en la API (validado y documentado en Swagger) y una página Estadísticas en la web que lo pinte. Tests, revisión de seguridad y PR."
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "orquestador",
+  "total": 4200
+ },
+ {
+  "pausa": 1000,
+  "tipo": "delegar",
+  "de": "orquestador",
+  "a": "analista",
+  "texto": "Analiza la issue #1 y haz un plan para API y web"
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "orquestador",
+  "total": 4900
+ },
+ {
+  "pausa": 700,
+  "tipo": "accion",
+  "agente": "analista",
+  "herramienta": "Read",
+  "args": {
+   "file_path": "/home/alumno/proyectos/lab-cinedata-api/src/routes/pelicula.routes.js"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "analista",
+  "total": 3600
+ },
+ {
+  "pausa": 600,
+  "tipo": "accion",
+  "agente": "analista",
+  "herramienta": "Read",
+  "args": {
+   "file_path": "/home/alumno/proyectos/lab-cinedata-api/src/services/pelicula.service.js"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "analista",
+  "total": 7200
+ },
+ {
+  "pausa": 600,
+  "tipo": "accion",
+  "agente": "analista",
+  "herramienta": "Read",
+  "args": {
+   "file_path": "/home/alumno/proyectos/lab-cinedata-api/src/models/Pelicula.js"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "analista",
+  "total": 10800
+ },
+ {
+  "pausa": 600,
+  "tipo": "accion",
+  "agente": "analista",
+  "herramienta": "Grep",
+  "args": {
+   "pattern": "pedir\\("
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "analista",
+  "total": 14400
+ },
+ {
+  "pausa": 600,
+  "tipo": "accion",
+  "agente": "analista",
+  "herramienta": "Read",
+  "args": {
+   "file_path": "/home/alumno/proyectos/cinedata-cors/js/api.js"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "analista",
+  "total": 18000
+ },
+ {
+  "pausa": 900,
+  "tipo": "entregar",
+  "de": "analista",
+  "a": "orquestador",
+  "texto": "Plan: aggregate $unwind generos + $group en el servicio; ruta /estadisticas ANTES de /:id; ?minimo validado 1-50; página nueva en la web con pedir()."
+ },
+ {
+  "pausa": 900,
+  "tipo": "accion",
+  "agente": "orquestador",
+  "herramienta": "Bash",
+  "args": {
+   "command": "git switch -c ISSUE1-estadisticas-por-genero"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "orquestador",
+  "total": 5500
+ },
+ {
+  "pausa": 1000,
+  "tipo": "delegar",
+  "de": "orquestador",
+  "a": "back",
+  "texto": "Implementa GET /peliculas/estadisticas según el plan"
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "orquestador",
+  "total": 6200
+ },
+ {
+  "pausa": 900,
+  "tipo": "accion",
+  "agente": "back",
+  "herramienta": "Edit",
+  "args": {
+   "file_path": "/home/alumno/proyectos/lab-cinedata-api/src/services/pelicula.service.js"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "back",
+  "total": 4800
+ },
+ {
+  "pausa": 800,
+  "tipo": "accion",
+  "agente": "back",
+  "herramienta": "Edit",
+  "args": {
+   "file_path": "/home/alumno/proyectos/lab-cinedata-api/src/controller/pelicula.controller.js"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "back",
+  "total": 9600
+ },
+ {
+  "pausa": 800,
+  "tipo": "accion",
+  "agente": "back",
+  "herramienta": "Edit",
+  "args": {
+   "file_path": "/home/alumno/proyectos/lab-cinedata-api/src/validators/pelicula.validator.js"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "back",
+  "total": 14400
+ },
+ {
+  "pausa": 900,
+  "tipo": "accion",
+  "agente": "back",
+  "herramienta": "Edit",
+  "args": {
+   "file_path": "/home/alumno/proyectos/lab-cinedata-api/src/routes/pelicula.routes.js"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "back",
+  "total": 19200
+ },
+ {
+  "pausa": 900,
+  "tipo": "accion",
+  "agente": "back",
+  "herramienta": "Bash",
+  "args": {
+   "command": "curl -s localhost:3000/peliculas/estadisticas?minimo=2"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "back",
+  "total": 24000
+ },
+ {
+  "pausa": 900,
+  "tipo": "entregar",
+  "de": "back",
+  "a": "orquestador",
+  "texto": "Endpoint listo: devuelve [{genero, total, notaMedia}] ordenado; ?minimo validado; anotación @openapi añadida."
+ },
+ {
+  "pausa": 1000,
+  "tipo": "delegar",
+  "de": "orquestador",
+  "a": "front",
+  "texto": "Crea la página Estadísticas en cinedata-cors"
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "orquestador",
+  "total": 6900
+ },
+ {
+  "pausa": 600,
+  "tipo": "accion",
+  "agente": "front",
+  "herramienta": "Read",
+  "args": {
+   "file_path": "/home/alumno/proyectos/cinedata-cors/index.html"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "front",
+  "total": 5250
+ },
+ {
+  "pausa": 900,
+  "tipo": "accion",
+  "agente": "front",
+  "herramienta": "Write",
+  "args": {
+   "file_path": "/home/alumno/proyectos/cinedata-cors/estadisticas.html"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "front",
+  "total": 10500
+ },
+ {
+  "pausa": 900,
+  "tipo": "accion",
+  "agente": "front",
+  "herramienta": "Write",
+  "args": {
+   "file_path": "/home/alumno/proyectos/cinedata-cors/js/estadisticas.js"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "front",
+  "total": 15750
+ },
+ {
+  "pausa": 700,
+  "tipo": "accion",
+  "agente": "front",
+  "herramienta": "Edit",
+  "args": {
+   "file_path": "/home/alumno/proyectos/cinedata-cors/css/estilos.css"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "front",
+  "total": 21000
+ },
+ {
+  "pausa": 900,
+  "tipo": "entregar",
+  "de": "front",
+  "a": "orquestador",
+  "texto": "Página creada: tabla y barras por género con pedir('/peliculas/estadisticas'); enlace en la navbar."
+ },
+ {
+  "pausa": 1000,
+  "tipo": "delegar",
+  "de": "orquestador",
+  "a": "qa",
+  "texto": "Escribe y ejecuta los tests del endpoint"
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "orquestador",
+  "total": 7600
+ },
+ {
+  "pausa": 900,
+  "tipo": "accion",
+  "agente": "qa",
+  "herramienta": "Write",
+  "args": {
+   "file_path": "/home/alumno/proyectos/lab-cinedata-api/tests/estadisticas.test.js"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "qa",
+  "total": 4000
+ },
+ {
+  "pausa": 1200,
+  "tipo": "accion",
+  "agente": "qa",
+  "herramienta": "Bash",
+  "args": {
+   "command": "npm test"
+  }
+ },
+ {
+  "pausa": 1200,
+  "tipo": "resultado",
+  "agente": "qa",
+  "salida": "FAIL tests/estadisticas.test.js\n  x rechaza minimo=0 (expected 400, received 200)\nTests: 1 failed, 3 passed, 4 total"
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "qa",
+  "total": 8000
+ },
+ {
+  "pausa": 900,
+  "tipo": "accion",
+  "agente": "qa",
+  "herramienta": "Edit",
+  "args": {
+   "file_path": "/home/alumno/proyectos/lab-cinedata-api/src/validators/pelicula.validator.js"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "qa",
+  "total": 12000
+ },
+ {
+  "pausa": 1200,
+  "tipo": "accion",
+  "agente": "qa",
+  "herramienta": "Bash",
+  "args": {
+   "command": "npm test"
+  }
+ },
+ {
+  "pausa": 1200,
+  "tipo": "resultado",
+  "agente": "qa",
+  "salida": "PASS tests/estadisticas.test.js\nTests: 4 passed, 4 total"
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "qa",
+  "total": 16000
+ },
+ {
+  "pausa": 900,
+  "tipo": "entregar",
+  "de": "qa",
+  "a": "orquestador",
+  "texto": "4 tests en verde. Corregido: la regla de minimo no se aplicaba en la ruta."
+ },
+ {
+  "pausa": 1000,
+  "tipo": "delegar",
+  "de": "orquestador",
+  "a": "seguridad",
+  "texto": "Audita el cambio y añade el workflow de CI"
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "orquestador",
+  "total": 8300
+ },
+ {
+  "pausa": 700,
+  "tipo": "accion",
+  "agente": "seguridad",
+  "herramienta": "Read",
+  "args": {
+   "file_path": "/home/alumno/proyectos/lab-cinedata-api/src/routes/pelicula.routes.js"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "seguridad",
+  "total": 4000
+ },
+ {
+  "pausa": 600,
+  "tipo": "accion",
+  "agente": "seguridad",
+  "herramienta": "Grep",
+  "args": {
+   "pattern": "process.env"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "seguridad",
+  "total": 8000
+ },
+ {
+  "pausa": 900,
+  "tipo": "accion",
+  "agente": "seguridad",
+  "herramienta": "Write",
+  "args": {
+   "file_path": "/home/alumno/proyectos/lab-cinedata-api/.github/workflows/test.yml"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "seguridad",
+  "total": 12000
+ },
+ {
+  "pausa": 900,
+  "tipo": "entregar",
+  "de": "seguridad",
+  "a": "orquestador",
+  "texto": "Sin secretos expuestos; endpoint público de solo lectura; minimo acotado. CI de npm test añadido."
+ },
+ {
+  "pausa": 1000,
+  "tipo": "delegar",
+  "de": "orquestador",
+  "a": "revisor",
+  "texto": "Revisa el diff y abre las PR"
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "orquestador",
+  "total": 9000
+ },
+ {
+  "pausa": 700,
+  "tipo": "accion",
+  "agente": "revisor",
+  "herramienta": "Bash",
+  "args": {
+   "command": "git diff --stat main"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "revisor",
+  "total": 2250
+ },
+ {
+  "pausa": 900,
+  "tipo": "accion",
+  "agente": "revisor",
+  "herramienta": "Bash",
+  "args": {
+   "command": "git add -A && git commit -m \"ISSUE1: estadísticas por género en API y web\""
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "revisor",
+  "total": 4500
+ },
+ {
+  "pausa": 900,
+  "tipo": "accion",
+  "agente": "revisor",
+  "herramienta": "Bash",
+  "args": {
+   "command": "git push -u origin ISSUE1-estadisticas-por-genero"
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "revisor",
+  "total": 6750
+ },
+ {
+  "pausa": 1000,
+  "tipo": "accion",
+  "agente": "revisor",
+  "herramienta": "Bash",
+  "args": {
+   "command": "gh pr create --title \"[ISSUE1] Estadísticas por género\" --body \"Closes #1\""
+  }
+ },
+ {
+  "pausa": 150,
+  "tipo": "tokens",
+  "agente": "revisor",
+  "total": 9000
+ },
+ {
+  "pausa": 900,
+  "tipo": "entregar",
+  "de": "revisor",
+  "a": "orquestador",
+  "texto": "Aprobado. PR abierta con Closes #1: falta la revisión humana."
+ },
+ {
+  "pausa": 1200,
+  "tipo": "turno-fin"
+ }
+]

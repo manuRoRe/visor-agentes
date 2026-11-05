@@ -2,8 +2,18 @@
   "titulo": "CineData · equipo de agentes",
   "puerto": 4545,
   "repos": [
-    { "id": "api", "nombre": "lab-cinedata-api", "ruta": "../lab-cinedata-api", "github": "" },
-    { "id": "web", "nombre": "cinedata-cors", "ruta": "../cinedata-cors", "github": "" }
+    {
+      "id": "api",
+      "nombre": "lab-cinedata-api",
+      "ruta": "../lab-cinedata-api",
+      "github": "manuRoRe/lab-cinedata-api"
+    },
+    {
+      "id": "web",
+      "nombre": "cinedata-cors",
+      "ruta": "../cinedata-cors",
+      "github": "manuRoRe/cinedata-cors"
+    }
   ],
   "orden": ["orquestador", "analista", "back", "front", "qa", "seguridad", "revisor"],
   "agentes": {
